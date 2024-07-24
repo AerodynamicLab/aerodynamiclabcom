@@ -18,6 +18,9 @@
   .text-muted {
     color: var(--aw-color-text-muted);
   }
+  .text-linkhover {
+    color: var(--aw-color-text-link-hover);
+  }
 }
 
 @layer components {
