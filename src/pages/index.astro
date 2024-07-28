@@ -6,12 +6,12 @@ import Hero2 from '~/components/widgets/Hero2.astro';
 import Features from '~/components/widgets/Features.astro';
 import Steps3 from '~/components/widgets/Steps3.astro';
 import Content from '~/components/widgets/Content.astro';
-
-import { headerData } from '~/navigation';
 import FAQs from '~/components/widgets/FAQs.astro';
 
+import { headerData } from '~/navigation';
+
 const metadata = {
-  title: 'Aerodynamic Lab - Applied Aeronautical Research',
+  title: 'Aerodynamic Lab - Applied Aerodynamic Research',
 };
 
 
@@ -34,15 +34,15 @@ const metadata = {
     actions={[
       { variant: 'primary', target: '_blank', text: 'Contact Us', href: 'https://github.com/onwidget/astrowind' },
     ]}
-    image={{ src: '~/assets/images/Intro.png', alt: 'Aerodynamic Lab - Paper Plane with streamlines' }}
+    image={{ src: '~/assets/images/plane-logo-orange-blue-streamline.png', alt: 'Aerodynamic Lab - Paper Plane with streamlines' }}
   >
     <Fragment slot="title">
-      Aeronautical Applied Research
+      Applied Aerodynamic Research
     </Fragment>
 
     <Fragment slot="subtitle">
       <span class="hidden sm:inline">
-        Simple and practical solutions for your <span class="font-semibold">aerodynamic </span>related problems. 
+        Simple and practical solutions for your <span class="font-semibold">aerodynamic </span>related problems. We do simulations, airplane design, and many other shit at the price of suck my dick per hour 
     </Fragment>
   </Hero2>
 
@@ -50,40 +50,55 @@ const metadata = {
 
   <Features
     id="features"
-    title="Expertise"
+    title="Know-How"
     subtitle=""
     columns={3}
     items={[
       {
-        title: 'Integration of Astro 4.0 and Tailwind CSS',
+        title: 'Conceptual to detailed small aircraft design',
         description:
-          'Offers a powerful combination that enhances both the development process and the end-user experience. Also, allows to build dynamic and visually stunning websites with optimized performance.',
+          'From predesign architectural and mission studies to detailed design of UAVs, eVTOL and small aircraft',
         icon: 'tabler:layers-union',
       },
       {
-        title: 'Versatile design for startups, small businesses, and more',
-        description: `Easily customize AstroWind to harmonize with the unique branding and identity of your venture. AstroWind's versatile design adapts to suit your needs.`,
+        title: 'Low and mid fidelity aerodynamic simulations',
+        description: `From simple panel methods to surface vorticity flow solver with empirical corrections. Fast simulations for the early design stages`,
         icon: 'tabler:artboard',
       },
       {
-        title: 'Effortless customization for portfolios and marketing sites',
+        title: 'Computational Fluid Dynamics (CFD)',
         description:
-          'With intuitive customization, easily showcase portfolio pieces, case studies, project highlights, and relevant content. Ideal for creative professionals and businesses looking to highlight their expertise.',
+          'Preprocessing, solution and postprocessing of CFD simulations with RANS, DES and LES modelling',
         icon: 'tabler:writing',
       },
       {
-        title: 'Optimized landing pages and engaging blogs',
-        description: `Landing pages are strategically designed to captivate visitors and prompt specific actions. Additionally, the blog creation feature empowers sharing insights, engaging the audience.`,
+        title: 'Wind tunnel and flight testing',
+        description: `Validation and verification with 'real world testing'. From sensoring or data postprocessing to running entire test campaigns`,
         icon: 'tabler:podium',
       },
       {
-        title: 'Fast loading times and production-ready code',
-        description: `Using Astro 4.0 ensures fast loading and seamless rendering, enhancing browsing. The code follows best practices, improving user experience, SEO, and reducing bounce rates.`,
+        title: 'Flight dynamics and control',
+        description: `Analyzing and optimizing the performance and stability of flying vehicles.`,
         icon: 'tabler:rocket',
       },
       {
-        title: 'SEO-optimized structure for enhanced visibility',
-        description: `Follows SEO best practices with clean code, semantic HTML markup, and fast loading, enhancing search engine rankings. AstroWind's SEO structure ensures visibility to potential customers and clients.`,
+        title: 'Digital twins and aerodynamic databases',
+        description: `Computational models that represent the reality`,
+        icon: 'tabler:eyeglass',
+      },
+      {
+        title: 'Acoustics',
+        description: `Propellers and wind turbine noise reduction`,
+        icon: 'tabler:eyeglass',
+      },
+      {
+        title: 'Multidisciplinary Optimization',
+        description: `Aerodynamic, weight, propulsive, structure etc. joint optimization`,
+        icon: 'tabler:eyeglass',
+      },
+      {
+        title: 'Python Frameworks',
+        description: `Although we are not software engineers, we can help you streamline and automatize your processes`,
         icon: 'tabler:eyeglass',
       },
     ]}
@@ -97,13 +112,8 @@ const metadata = {
     isReversed
     items={[
       {
-        title: 'Description:',
-        description:
-          'Are you a startup with big dreams? AstroWind propels your success. Our template forges a seamless online presence, attracting investors and customers from day one. Astro 4.0 and Tailwind CSS ensure striking, responsive sites, leaving lasting impressions. Countless startups leverage AstroWind to kickstart their journey and resonate with audiences.',
-      },
-      {
-        title: 'Benefits:',
-        description: `Allow startups to quickly create professional websites without investing extensive time and resources. <br /> Make a memorable first impression with visually appealing design elements that highlight your startup's unique value proposition. <br /> Ensures your website looks stunning and works well on all devices. <br /> Engage potential investors and customers with engaging content, clear messaging, and intuitive navigation.`,
+        title: 'Aircraft architecture design, aerodynamic simulations, aerodynamic models, windtunnel testing for validation etc.',
+        description: '',
       },
     ]}
     image={{
@@ -113,7 +123,7 @@ const metadata = {
   >
     <Fragment slot="content">
       <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">
-        Startup success stories: <br /><span class="text-2xl">Launching with AstroWind</span>
+        UAVs, eVTOL, small aircraft
       </h3>
     </Fragment>
 
@@ -128,12 +138,8 @@ const metadata = {
     isAfterContent={true}
     items={[
       {
-        title: 'Description:',
-        description: `For SaaS businesses, user experience is key. AstroWind enhances showcasing SaaS solutions intuitively. The template's Astro 4.0 and Tailwind CSS integration guarantees user-friendly experience, mirroring your software's efficiency. Customize pages to communicate SaaS value and solutions for your audience.`,
-      },
-      {
-        title: 'Benefits:',
-        description: `Ensuring a cohesive and user-centric design for your SaaS website. <br /> Effectively communicate complex SaaS features through visual aids, animations, and interactive elements. <br /> Prioritize user needs and pain points through well-structured layouts and clear navigation. <br /> Encourage visitors to take action with strategically placed CTAs. <br /> Ensures your SaaS website works seamlessly across all devices.`,
+        title: 'Lower consumption and emissions for the automotive industry and sports ',
+        description: ``,
       },
     ]}
     image={{
@@ -143,7 +149,7 @@ const metadata = {
   >
     <Fragment slot="content">
       <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">
-        SaaS showcase: <br /><span class="text-2xl">Streamlining user experience</span>
+        Vehicle Drag Reduction
       </h3>
     </Fragment>
 
@@ -159,12 +165,8 @@ const metadata = {
     isAfterContent={true}
     items={[
       {
-        title: 'Description:',
-        description: `Your portfolio is your masterpiece, and AstroWind is your canvas. Whether you're a designer, photographer, artist, or any other creative professional, AstroWind empowers you to showcase your work with elegance and sophistication. Tailored to highlight your creative projects, AstroWind's templates offer a visually immersive experience that lets your portfolio shine.`,
-      },
-      {
-        title: 'Benefits:',
-        description: `Serve as a captivating backdrop to showcase your creative work, capturing attention and leaving a lasting impression. <br /> Tailor your portfolio to reflect your unique style and artistic vision. <br /> Prioritizes visuals, allowing you to present your work in high-resolution detail that draws viewers into your creations. <br /> Enables seamless navigation for effortless portfolio exploration.`,
+        title: 'Blade optimization, noise reduction, characteristics',
+        description: ``,
       },
     ]}
     image={{
@@ -174,7 +176,7 @@ const metadata = {
   >
     <Fragment slot="content">
       <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">
-        Creative portfolios: <br /><span class="text-2xl">Highlighting your work</span>
+        Propellers and wind turbines
       </h3>
     </Fragment>
 
@@ -182,36 +184,6 @@ const metadata = {
       <div class="absolute inset-0 bg-white dark:bg-transparent"></div>
     </Fragment>
   </Content>
-
-  <!-- Content Widget **************** -->
-
-  <Content
-    items={[
-      {
-        title: 'Description:',
-        description: `For small businesses, a well-crafted website can be a game-changer. AstroWind empowers small businesses to not only establish a credible online presence but also convert visitors into loyal customers. The template's thoughtful design and optimization features ensure that your website doesn't just attract attention but also guides visitors through a seamless journey, ultimately leading to conversions.`,
-      },
-      {
-        title: 'Benefits:',
-        description: `Present your small business with a professional and polished website that instills confidence and trust among visitors. <br /> Strategically placed CTAs, user-friendly forms, and optimized layouts work together to drive user engagement and conversions. <br /> Ensure a smooth browsing experience, reducing bounce rates and encouraging interaction.`,
-      },
-    ]}
-    image={{
-      src: 'https://images.unsplash.com/photo-1514621166532-aa7eb1a3a2f4?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=774&q=80',
-      alt: 'Small Business Image',
-    }}
-  >
-    <Fragment slot="content">
-      <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">
-        Small business growth: <br /><span class="text-2xl">Converting visitors into customers</span>
-      </h3>
-    </Fragment>
-
-    <Fragment slot="bg">
-      <div class="absolute inset-0 bg-white dark:bg-transparent"></div>
-    </Fragment>
-  </Content>
-
  
   <!-- FAQs Widget ******************* -->
 
@@ -219,25 +191,25 @@ const metadata = {
     title="Frequently Asked Questions"
     items={[
       {
-        title: 'What are ypur prices',
+        title: 'What are your prices',
         description:
-          'blibliblib we are mega good',
+          'The cost of materials needed for the project (i.e. windtunnel tests) are also added. Prices are computed by hour of work, and depend on several factors (lead-time,  materials required, external costs etc.) but it will be agreed before the start of the work. In general, average price is around 200E / hour for jobs up to 10 hours, and keeps descending to 80 per hour for projects above 100 hours etc.',
         icon: 'tabler:chevrons-right',
       },
       {
-        title: 'Can I use AstroWind for both personal and commercial projects?',
-        description: `Certainly! AstroWind is versatile and can be used for a wide range of projects, including both personal and commercial endeavors. Whether you're building a professional portfolio, launching a startup, or creating a marketing website, AstroWind has you covered.`,
+        title: 'I get prices depend on the project, but how much would it cost, for example, a CFD simulation',
+        description: `If the geometry is clean so that only meshing, simulation and extraction of basic results are required, for a mesh of a few millions elements, price will be around 300E`,
         icon: 'tabler:chevrons-right',
       },
       {
-        title: 'What level of coding knowledge is required to use AstroWind?',
+        title: 'What tools do you use?',
         description:
-          'While some familiarity with HTML, CSS, and web development concepts is helpful, the user-friendly interface and customization options allow those with limited coding experience to create impressive websites. For more advanced users, AstroWind offers extensive customization capabilities.',
+          'See our tools section',
         icon: 'tabler:chevrons-right',
       },
       {
-        title: 'Is customer support available for AstroWind users seeking guidance?',
-        description: `Absolutely, our dedicated customer support team is here to assist you with any questions or challenges you may encounter. Feel free to reach out to us through our support channels, and we'll be happy to provide the help you need.`,
+        title: 'Is there training available?',
+        description: `Yes, we provide training and material for several of the software tools we use, as well as for validation and testing. Contact us for more information!`,
         icon: 'tabler:chevrons-right',
       },
     ]}
