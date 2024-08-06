@@ -4,23 +4,23 @@ export const headerData = {
   links: [
       {
         text: 'Expertise',
-        href: '#',
+        href: '#expertise-section',
       },
       {
         text: 'Applications',
-        href: '#',
+        href: '#applications-section',
       },
       {
         text: 'Why Us?',
-        href: '#',
+        href: '#why-us-section',
       },
       {
         text: 'FAQ',
-        href: '#',
+        href: '#faqs-section',
       },
       {
         text: 'Contact',
-        href: '#',
+        href: '#contact-section',
       },
   ]
 };

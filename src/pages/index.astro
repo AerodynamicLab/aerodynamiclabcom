@@ -4,6 +4,7 @@ import Layout from '~/layouts/PageLayout.astro';
 import Header from '~/components/widgets/Header.astro';
 import Hero2 from '~/components/widgets/Hero2.astro';
 import Features from '~/components/widgets/Features.astro';
+import Features2 from '~/components/widgets/Features2.astro';
 import Steps3 from '~/components/widgets/Steps3.astro';
 import Content from '~/components/widgets/Content.astro';
 import FAQs from '~/components/widgets/FAQs.astro';
@@ -27,7 +28,7 @@ const metadata = {
     />
   </Fragment>
 
-  <!-- Hero2 Widget ******************* -->
+  <!-- Landing Section ******************* -->
 
   <Hero2
     tagline=""
@@ -41,16 +42,20 @@ const metadata = {
     </Fragment>
 
     <Fragment slot="subtitle">
-      <span class="hidden sm:inline">
-        Simple and practical solutions for your <span class="font-semibold">aerodynamic </span>related problems. We do simulations, airplane design, and many other shit at the price of suck my dick per hour 
+        Simple. Pragmatic. Engineering.
+    </Fragment>
+
+    <Fragment slot="content">
+        We are a research lab that <span class="font-semibold">helps you solve your aerodynamic </span> problems.
+        Our goal is to allow access to the latest technology to design, analyse and optimize aircraft, wind turbines, propellers and other vehicles
     </Fragment>
   </Hero2>
 
-  <!-- Features Widget *************** -->
+  <!-- Expertise Section *************** -->
 
   <Features
-    id="features"
-    title="Know-How"
+    id="expertise-section"
+    title="Expertise"
     subtitle=""
     columns={3}
     items={[
@@ -104,9 +109,10 @@ const metadata = {
     ]}
   />
 
-  <!-- Content Widget **************** -->
+  <!-- Applications Section **************** -->
 
   <Content
+    id="applications-section"
     title="Applications"
     subtitle=""
     isReversed
@@ -123,7 +129,7 @@ const metadata = {
   >
     <Fragment slot="content">
       <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">
-        UAVs, eVTOL, small aircraft
+        UAVs, eVTOL, Small Aircraft
       </h3>
     </Fragment>
 
@@ -131,8 +137,6 @@ const metadata = {
       <div class="absolute inset-0 bg-white dark:bg-transparent"></div>
     </Fragment>
   </Content>
-
-  <!-- Content Widget **************** -->
 
   <Content
     isAfterContent={true}
@@ -158,8 +162,6 @@ const metadata = {
     </Fragment>
   </Content>
 
-  <!-- Content Widget **************** -->
-
   <Content
     isReversed
     isAfterContent={true}
@@ -176,7 +178,7 @@ const metadata = {
   >
     <Fragment slot="content">
       <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">
-        Propellers and wind turbines
+        Propellers, Wind Turbines
       </h3>
     </Fragment>
 
@@ -185,9 +187,17 @@ const metadata = {
     </Fragment>
   </Content>
  
+  <Features2
+  title="Why us?"
+  id="why-us-section"
+  subtitle="Efficiency is essential in a world of tight margins and climate concerns. Design and optimization in the aero-field plays an important role in many fields (even cycling nowadays!), and that's where we come in. We enable you to outsource the heavy lifting, delivering not only comprehensive reports, presentations, and raw data but also knowledge and insight: we transfer the knowledge acquired during the process, so it feels like you did it in-house."
+> 
+</Features2>
+
   <!-- FAQs Widget ******************* -->
 
   <FAQs
+    id="faqs-section"
     title="Frequently Asked Questions"
     items={[
       {
@@ -219,10 +229,11 @@ const metadata = {
     </Fragment>
   </FAQs>
 
-  <!-- Steps3 Widget ****************** -->
+  <!-- Contact Us Section ****************** -->
 
   <Steps3
     title="Reach out"
+    id="contact-section"
     subtitle="Have questions? Feel free to contact us using the form below. We're here to help!"
     callToAction={{
       text: 'Contact us',
@@ -230,11 +241,11 @@ const metadata = {
     }}
     items={[
       {
-        title: 'contact@support.com',
+        title: 'hello@aerodynamiclab.com',
         icon: 'tabler:mail',
       },
       {
-        title: '+1 (234) 567-890',
+        title: '+41 77 994 12 7',
         icon: 'tabler:headset',
       },
       {
