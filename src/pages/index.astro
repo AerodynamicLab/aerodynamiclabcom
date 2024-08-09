@@ -33,7 +33,7 @@ const metadata = {
   <Hero2
     tagline=""
     actions={[
-      { variant: 'primary', target: '_blank', text: 'Contact Us', href: 'https://github.com/onwidget/astrowind' },
+      { variant: 'primary', target: '_blank', text: 'Contact Us', href: '#contact-section' },
     ]}
     image={{ src: '~/assets/images/plane-logo-orange-blue-streamline.png', alt: 'Aerodynamic Lab - Paper Plane with streamlines' }}
   >
@@ -46,7 +46,7 @@ const metadata = {
     </Fragment>
 
     <Fragment slot="content">
-        We are a research lab that <span class="font-semibold">helps you solve your aerodynamic </span> problems.
+        We are a research lab that <span class="font-semibold">helps you solve your aerodynamic problems </span> .
         Our goal is to allow access to the latest technology to design, analyse and optimize aircraft, wind turbines, propellers and other vehicles
     </Fragment>
   </Hero2>
@@ -60,51 +60,51 @@ const metadata = {
     columns={3}
     items={[
       {
-        title: 'Conceptual to detailed small aircraft design',
+        title: 'Aircraft design',
         description:
-          'From predesign architectural and mission studies to detailed design of UAVs, eVTOL and small aircraft',
-        icon: 'tabler:layers-union',
+          'UAVs, eVTOL and small aircraft architecture and envelope design',
+        icon: 'tabler:tools', // edit, writing, pencil
       },
       {
-        title: 'Low and mid fidelity aerodynamic simulations',
-        description: `From simple panel methods to surface vorticity flow solver with empirical corrections. Fast simulations for the early design stages`,
-        icon: 'tabler:artboard',
+        title: 'Low fidelity aerodynamic simulations',
+        description: `Fast and inexpensive simulations. From panel methods to surface vorticity solvers.`,
+        icon: 'tabler:abacus',
       },
       {
         title: 'Computational Fluid Dynamics (CFD)',
         description:
-          'Preprocessing, solution and postprocessing of CFD simulations with RANS, DES and LES modelling',
-        icon: 'tabler:writing',
+          'Up to 40 million elements meshes. RANS and optionally LES and DES simulation.',
+        icon: 'tabler:calculator',  // cpu, math-integrals
       },
       {
         title: 'Wind tunnel and flight testing',
-        description: `Validation and verification with 'real world testing'. From sensoring or data postprocessing to running entire test campaigns`,
-        icon: 'tabler:podium',
+        description: `Validation and verification with 'real world testing'. Sensoring, acquisition and data postprocessing.`,
+        icon: 'tabler:plane-inflight',
       },
       {
         title: 'Flight dynamics and control',
-        description: `Analyzing and optimizing the performance and stability of flying vehicles.`,
-        icon: 'tabler:rocket',
+        description: `Analysis and optimisation of flying vehicles stability.`,
+        icon: 'tabler:send',
       },
       {
         title: 'Digital twins and aerodynamic databases',
-        description: `Computational models that represent the reality`,
-        icon: 'tabler:eyeglass',
+        description: `Computational models that represent reality`,
+        icon: 'tabler:database',
       },
       {
         title: 'Acoustics',
         description: `Propellers and wind turbine noise reduction`,
-        icon: 'tabler:eyeglass',
+        icon: 'tabler:volume-2', //drone, building-wind-turbine, windmill-fill
       },
       {
         title: 'Multidisciplinary Optimization',
         description: `Aerodynamic, weight, propulsive, structure etc. joint optimization`,
-        icon: 'tabler:eyeglass',
+        icon: 'tabler:adjustments',
       },
       {
         title: 'Python Frameworks',
-        description: `Although we are not software engineers, we can help you streamline and automatize your processes`,
-        icon: 'tabler:eyeglass',
+        description: `Although we are not software engineers, we can help you streamline and automatize your processes with Python frameworks`,
+        icon: 'tabler:code-dots',  //apps, brakets-angle
       },
     ]}
   />
