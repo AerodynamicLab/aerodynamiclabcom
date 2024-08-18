@@ -4,10 +4,9 @@ import Layout from '~/layouts/PageLayout.astro';
 import Header from '~/components/widgets/Header.astro';
 import Hero2 from '~/components/widgets/Hero2.astro';
 import Features from '~/components/widgets/Features.astro';
-import Steps3 from '~/components/widgets/Steps3.astro';
+import Contact2 from '~/components/widgets/Contact2.astro';
 import Content from '~/components/widgets/Content.astro';
 import FAQs from '~/components/widgets/FAQs.astro';
-import ContactUs from '~/components/widgets/Contact.astro';
 
 import { headerData } from '~/navigation';
 
@@ -271,10 +270,10 @@ const metadata = {
 
   <!-- Contact Us Section ****************** -->
 
-  <Steps3
+  <Contact2
     title="Reach out"
     id="contact-section"
-    subtitle="Do you have questions? Contact us using the form below. We're here to help!"
+    subtitle=""
     items={[
       {
         title: 'hello@aerodynamiclab.com',
@@ -288,30 +287,10 @@ const metadata = {
         title: '@AerodynamicLab',
         icon: 'tabler:brand-linkedin',
       },
+      {
+        title: '@AerodynamicLab',
+        icon: 'tabler:brand-x',
+      },
     ]}
   />
 
-  <ContactUs
-  id="form"
-  title="Drop us a message"
-  subtitle=""
-  inputs={[
-    {
-      type: 'text',
-      name: 'name',
-      label: 'Name',
-    },
-    {
-      type: 'email',
-      name: 'email',
-      label: 'Email',
-    },
-  ]}
-  textarea={{
-    label: 'Message',
-  }}
-  disclaimer={{
-    label:
-      'By submitting this contact form, you acknowledge and agree to the collection of your personal information.',
-  }}
-/>
