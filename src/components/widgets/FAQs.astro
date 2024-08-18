@@ -23,9 +23,9 @@ const {
   <ItemGrid
     items={items}
     columns={columns}
-    defaultIcon="tabler:chevron-right"
+    defaultIcon=""
     classes={{
-      container: `${columns === 1 ? 'max-w-4xl' : ''} gap-y-8 md:gap-y-12`,
+      container: `${columns === 1 ? 'max-w-4xl' : ''} ${columns === 1 ? 'md:gap-y-6' : 'md:gap-y-12'} gap-y-8`,
       panel: 'max-w-none',
       icon: 'flex-shrink-0 mt-1 w-6 h-6 text-primary',
     }}

@@ -4,10 +4,10 @@ import Layout from '~/layouts/PageLayout.astro';
 import Header from '~/components/widgets/Header.astro';
 import Hero2 from '~/components/widgets/Hero2.astro';
 import Features from '~/components/widgets/Features.astro';
-import Features2 from '~/components/widgets/Features2.astro';
 import Steps3 from '~/components/widgets/Steps3.astro';
 import Content from '~/components/widgets/Content.astro';
 import FAQs from '~/components/widgets/FAQs.astro';
+import ContactUs from '~/components/widgets/Contact.astro';
 
 import { headerData } from '~/navigation';
 
@@ -33,7 +33,7 @@ const metadata = {
   <Hero2
     tagline=""
     actions={[
-      { variant: 'primary', target: '_blank', text: 'Contact Us', href: '#contact-section' },
+      { variant: 'primary', text: 'Contact Us', href: '#contact-section' },
     ]}
     image={{ src: '~/assets/images/plane-logo-orange-blue-streamline.png', alt: 'Aerodynamic Lab - Paper Plane with streamlines' }}
   >
@@ -67,23 +67,23 @@ const metadata = {
       },
       {
         title: 'Low fidelity aerodynamic simulations',
-        description: `Fast and inexpensive simulations. From panel methods to surface vorticity solvers.`,
-        icon: 'tabler:abacus',
+        description: `Fast and inexpensive. From panel methods to surface vorticity solvers.`,
+        icon: 'tabler:math-symbols', //abacus
       },
       {
         title: 'Computational Fluid Dynamics (CFD)',
         description:
-          'Up to 40 million elements meshes. RANS and optionally LES and DES simulation.',
+          'Accurate simulations. RANS and optionally LES and DES.',
         icon: 'tabler:calculator',  // cpu, math-integrals
       },
       {
         title: 'Wind tunnel and flight testing',
-        description: `Validation and verification with 'real world testing'. Sensoring, acquisition and data postprocessing.`,
+        description: `Validation and verification with 'real world experiments'. Sensoring, acquisition and data postprocessing.`,
         icon: 'tabler:plane-inflight',
       },
       {
         title: 'Flight dynamics and control',
-        description: `Analysis and optimisation of flying vehicles stability.`,
+        description: `Analysis of flying vehicles stability and control.`,
         icon: 'tabler:send',
       },
       {
@@ -103,8 +103,8 @@ const metadata = {
       },
       {
         title: 'Python Frameworks',
-        description: `Although we are not software engineers, we can help you streamline and automatize your processes with Python frameworks`,
-        icon: 'tabler:code-dots',  //apps, brakets-angle
+        description: `Although not software engineers, we help you streamline your processes`,
+        icon: 'tabler:code',  //apps, brakets-angle, code-dots, brand-python
       },
     ]}
   />
@@ -118,7 +118,7 @@ const metadata = {
     isReversed
     items={[
       {
-        title: 'Aircraft architecture design, aerodynamic simulations, aerodynamic models, windtunnel testing for validation etc.',
+        title: 'Aircraft architecture design, aerodynamic simulations and models, windtunnel testing for validation etc.',
         description: '',
       },
     ]}
@@ -142,7 +142,7 @@ const metadata = {
     isAfterContent={true}
     items={[
       {
-        title: 'Lower consumption and emissions for the automotive industry and sports ',
+        title: 'Lower consumption, emissions and better performance for the automotive and sports industry ',
         description: ``,
       },
     ]}
@@ -167,7 +167,7 @@ const metadata = {
     isAfterContent={true}
     items={[
       {
-        title: 'Blade optimization, noise reduction, characteristics',
+        title: 'Blade design and optimization, noise reduction, wind turbine placement etc.',
         description: ``,
       },
     ]}
@@ -186,41 +186,81 @@ const metadata = {
       <div class="absolute inset-0 bg-white dark:bg-transparent"></div>
     </Fragment>
   </Content>
- 
-  <Features2
-  title="Why us?"
-  id="why-us-section"
-  subtitle="Efficiency is essential in a world of tight margins and climate concerns. Design and optimization in the aero-field plays an important role in many fields (even cycling nowadays!), and that's where we come in. We enable you to outsource the heavy lifting, delivering not only comprehensive reports, presentations, and raw data but also knowledge and insight: we transfer the knowledge acquired during the process, so it feels like you did it in-house."
-> 
-</Features2>
+
+  <!-- Why us section ******************* -->
+
+  <FAQs
+    id="why-us-section"
+    title="Why us?"
+    columns={2}
+    items={[
+      { title: "Flexibility",
+        description:"Aerodynamic workload comes in waves: we allow you to outsource the work when you need and not pay when you do not",
+        icon: 'tabler:chevron-right',
+
+      },
+      {
+        title: "Customer-centric",
+        description: "We are here to help you. We value clear and concise communication to best understand how can we do it.",
+        icon: 'tabler:chevron-right',
+      },
+      {
+        title: "Knowledge returns",
+        description:
+          "We deliver not only comprehensive reports, presentations, results or raw data but also we transfer the knowledge acquired during the process. It feels like done in-house.",
+        icon: 'tabler:chevron-right',
+      },
+      {
+        title: "Global view",
+        description:
+          "Differently from other very specialized firms, our wide expertise allows to see the bigger picture ",
+        icon: 'tabler:chevron-right',
+      },
+      /* {
+        title: "We love what we do",
+        description:
+          "We love solving technical challenges. Got an idea in mind? Let’s work on it and have fun together",
+        icon: 'tabler:chevron-right',
+      }, */
+    ]}
+  >
+  <Fragment slot="bg">
+    <div class="absolute inset-0 bg-white dark:bg-transparent"></div>
+  </Fragment>
+
+  </FAQs>
+
+
+
 
   <!-- FAQs Widget ******************* -->
 
   <FAQs
     id="faqs-section"
-    title="Frequently Asked Questions"
+    title="FAQs"
+    columns={1}
     items={[
       {
-        title: 'What are your prices',
+        title: 'What are your prices?',
         description:
-          'The cost of materials needed for the project (i.e. windtunnel tests) are also added. Prices are computed by hour of work, and depend on several factors (lead-time,  materials required, external costs etc.) but it will be agreed before the start of the work. In general, average price is around 200E / hour for jobs up to 10 hours, and keeps descending to 80 per hour for projects above 100 hours etc.',
-        icon: 'tabler:chevrons-right',
+          'Prices are computed depending on working hours plus the cost of materials needed (i.e. windtunnel tests). In general, average price is around 200€ / hour for jobs up to 20 hours, and descends until 100€ / hour for projects above 150 hours etc. Final price will depend on several factors but it will be agreed before the start of the project.',
+        icon: 'tabler:zoom-question',
       },
       {
-        title: 'I get prices depend on the project, but how much would it cost, for example, a CFD simulation',
+        title: 'How much would it cost, for example, a CFD simulation at various angles and/or airspeeds for one geometry',
         description: `If the geometry is clean so that only meshing, simulation and extraction of basic results are required, for a mesh of a few millions elements, price will be around 300E`,
-        icon: 'tabler:chevrons-right',
+        icon: 'tabler:zoom-question',
       },
       {
         title: 'What tools do you use?',
         description:
           'See our tools section',
-        icon: 'tabler:chevrons-right',
+        icon: 'tabler:zoom-question',
       },
       {
         title: 'Is there training available?',
         description: `Yes, we provide training and material for several of the software tools we use, as well as for validation and testing. Contact us for more information!`,
-        icon: 'tabler:chevrons-right',
+        icon: 'tabler:zoom-question',
       },
     ]}
   >
@@ -234,23 +274,44 @@ const metadata = {
   <Steps3
     title="Reach out"
     id="contact-section"
-    subtitle="Have questions? Feel free to contact us using the form below. We're here to help!"
-    callToAction={{
-      text: 'Contact us',
-      href: '/',
-    }}
+    subtitle="Do you have questions? Contact us using the form below. We're here to help!"
     items={[
       {
         title: 'hello@aerodynamiclab.com',
         icon: 'tabler:mail',
       },
-      {
+      /*{
         title: '+41 77 994 12 7',
         icon: 'tabler:headset',
-      },
+      },*/
       {
         title: '@AerodynamicLab',
         icon: 'tabler:brand-linkedin',
       },
     ]}
   />
+
+  <ContactUs
+  id="form"
+  title="Drop us a message today!"
+  subtitle="For quicker answers, explore our FAQs section. You may find the solution you're looking  for right there! If not, our support team is delighted to help you."
+  inputs={[
+    {
+      type: 'text',
+      name: 'name',
+      label: 'Name',
+    },
+    {
+      type: 'email',
+      name: 'email',
+      label: 'Email',
+    },
+  ]}
+  textarea={{
+    label: 'Message',
+  }}
+  disclaimer={{
+    label:
+      'By submitting this contact form, you acknowledge and agree to the collection of your personal information.',
+  }}
+/>
