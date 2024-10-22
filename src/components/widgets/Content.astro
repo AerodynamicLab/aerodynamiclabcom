@@ -76,9 +76,7 @@ const {
                 <Fragment set:html={image} />
               ) : (
                 <Image
-                  class="mx-auto w-full rounded-lg"
-                  width={600}
-                  height={400}
+                  class="mx-auto h-full object-contain rounded-lg"  
                   widths={[400, 768]}
                   sizes="(max-width: 768px) 100vw, 432px"
                   layout="responsive"
@@ -92,3 +90,5 @@ const {
     </div>
   </div>
 </WidgetWrapper>
+
+<!-- width={1387} height={518} -->
