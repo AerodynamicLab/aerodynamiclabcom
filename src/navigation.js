@@ -4,23 +4,23 @@ export const headerData = {
   links: [
       {
         text: 'Expertise',
-        href: '#expertise-section',
+        href: '/#expertise-section',
       },
       {
         text: 'Applications',
-        href: '#applications-section',
+        href: '/#applications-section',
       },
       {
         text: 'Why Us?',
-        href: '#why-us-section',
+        href: '/#why-us-section',
       },
       {
-        text: 'FAQ',
-        href: '#faqs-section',
+       text: 'FAQ',
+       href: '/#faqs-section',
       },
       {
         text: 'Contact',
-        href: '#contact-section',
+        href: '/#contact-section',
       },
   ]
 };
@@ -33,6 +33,7 @@ export const footerData = {
   socialLinks: [
     { ariaLabel: 'RSS', icon: 'tabler:rss', href: getAsset('/rss.xml') },
     { ariaLabel: 'Github', icon: 'tabler:brand-github', href: 'https://github.com/aerodynamiclab' },
+    { ariaLabel: 'LinkedIn', icon: 'tabler:brand-linkedin', href: 'https://linkedin.com/in/aerodynamiclab' },
   ],
   footNote: `
     <img class="w-5 h-5 md:w-6 md:h-6 md:-mt-0.5 bg-cover mr-1.5 rtl:mr-0 rtl:ml-1.5 float-left rtl:float-right rounded-sm" src="https://onwidget.com/favicon/favicon-32x32.png" alt="onWidget logo" loading="lazy"></img>

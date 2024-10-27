@@ -2,9 +2,8 @@
 import { Icon } from 'astro-icon/components';
 import WidgetWrapper from '~/components/ui/WidgetWrapper.astro';
 import Headline from '~/components/ui/Headline.astro';
-import FormContainer from '~/components/ui/Form.astro';
+import FormContainer from '~/components/ui/ZohoForm.astro';
 import type { Steps as Props } from '~/types';
-
 
 const {
   title = await Astro.slots.render('title'),
@@ -22,6 +21,7 @@ const {
 
 <WidgetWrapper id={id} isDark={isDark} containerClass={`max-w-6xl mx-auto ${classes?.container ?? ''}`} bg={bg}>
   <Headline title={title} tagline={tagline} />
+
   <div class={`flex flex-col-reverse gap-8 md:gap-12 md:flex-row ${isReversed ? 'md:flex-row-reverse' : ''}`}>
     <div class={`w-full lg:w-1/2 gap-8 md:gap-12 ${isReversed ? 'lg:ml-16 md:ml-8 ml-0' : 'lg:mr-16 md:mr-8 mr-0'}`}>
       <Headline
@@ -35,30 +35,12 @@ const {
         }}
       />
 
-      <FormContainer
-      inputs={[
-        {
-          type: 'text',
-          name: 'name',
-          label: 'Name',
-        },
-        {
-          type: 'email',
-          name: 'email',
-          label: 'Email',
-        }
-      ]}
-      textarea={{
-        label: 'Message',
-      }}
-      disclaimer={{
-        label: 'By submitting this contact form, you acknowledge and agree to the collection of your personal information.',
-      }}     
-      />
-
+      <FormContainer />
     </div>
+
     <div class="w-full lg:w-1/2 px-0">
       <ul class="space-y-2">
+        <li class="flex md:-mx-2 items-center"></li>
         {
           items && items.length
             ? items.map(({ title: title2, icon }, index) => (

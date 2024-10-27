@@ -13,40 +13,33 @@ import { headerData } from '~/navigation';
 const metadata = {
   title: 'Aerodynamic Lab - Applied Aerodynamic Research',
 };
-
-
 ---
-
-
 
 <Layout metadata={metadata}>
   <Fragment slot="header">
-    <Header
-      {...headerData}
-      isSticky
-    />
+    <Header {...headerData} isSticky />
   </Fragment>
 
   <!-- Landing Section ******************* -->
 
   <Hero2
     tagline=""
-    actions={[
-      { variant: 'primary', text: 'Contact Us', href: '#contact-section' },
-    ]}
-    image={{ src: '~/assets/images/landing_plane_streamlines_light.png', alt: 'Aerodynamic Lab - Paper Plane with streamlines' }}
+    actions={[{ variant: 'primary', text: 'Contact Us', href: '#contact-section' }]}
+    image={{
+      src: '~/assets/images/landing_plane_streamlines_light.png',
+      alt: 'Aerodynamic Lab - Paper Plane with streamlines',
+    }}
   >
-    <Fragment slot="title">
-      Applied Aerodynamic Research
-    </Fragment>
+    <Fragment slot="title"> Applied Aerodynamic Research </Fragment>
 
-    <Fragment slot="subtitle">
-        Simple. Pragmatic. Engineering.
-    </Fragment>
+    <Fragment slot="subtitle"> Simple. Pragmatic. Engineering. </Fragment>
 
     <Fragment slot="content">
-        We are a research lab dedicated to addressing <span class="font-semibold"> aerodynamic challenges in transport and energy sectors</span> .
-        Our goal is to open access and knowledge to the latest technologies in design, analysis, and optimization for aircraft, wind turbines, propellers, and other vehicles.
+      We are a research lab dedicated to <span class="font-semibold">
+        solving aerodynamic challenges in transport and energy sectors</span
+      >. <br />
+      Our goal is to allow access and knowledge to the latest technologies in design, analysis, and optimization for aircraft,
+      wind turbines, propellers and other vehicles.
     </Fragment>
   </Hero2>
 
@@ -60,20 +53,18 @@ const metadata = {
     items={[
       {
         title: 'Aircraft design',
-        description:
-          'UAVs, eVTOL and small aircraft architecture and envelope design',
+        description: 'UAVs, eVTOL and small aircraft architecture and envelope design',
         icon: 'tabler:tools', // edit, writing, pencil
       },
       {
         title: 'Low fidelity aerodynamic simulations',
-        description: `Fast and inexpensive. From panel methods to surface vorticity solvers.`,
+        description: `Fast and inexpensive. From lifting line to vorticity-based solvers.`,
         icon: 'tabler:math-symbols', //abacus
       },
       {
         title: 'Computational Fluid Dynamics (CFD)',
-        description:
-          'Accurate simulations. RANS and optionally LES and DES.',
-        icon: 'tabler:calculator',  // cpu, math-integrals
+        description: 'Accurate simulations. RANS and optionally LES and DES.',
+        icon: 'tabler:calculator', // cpu, math-integrals
       },
       {
         title: 'Wind tunnel and flight testing',
@@ -103,7 +94,7 @@ const metadata = {
       {
         title: 'Python Frameworks',
         description: `Although not software engineers, we help you streamline your processes`,
-        icon: 'tabler:code',  //apps, brakets-angle, code-dots, brand-python
+        icon: 'tabler:code', //apps, brakets-angle, code-dots, brand-python
       },
     ]}
   />
@@ -117,7 +108,8 @@ const metadata = {
     isReversed
     items={[
       {
-        title: 'Aircraft architecture design, multi-fidelity aerodynamic simulations and models, windtunnel testing and propeller design among others',
+        title:
+          'Aircraft architecture design, multi-fidelity aerodynamic simulations and models, windtunnel testing and propeller design among others',
         description: '',
       },
     ]}
@@ -127,9 +119,7 @@ const metadata = {
     }}
   >
     <Fragment slot="content">
-      <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">
-        Small Aircraft, eVTOL, UAVs
-      </h3>
+      <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">Small Aircraft, eVTOL, UAVs</h3>
     </Fragment>
 
     <Fragment slot="bg">
@@ -151,9 +141,7 @@ const metadata = {
     }}
   >
     <Fragment slot="content">
-      <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">
-        Drag Reduction
-      </h3>
+      <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">Drag Reduction</h3>
     </Fragment>
 
     <Fragment slot="bg">
@@ -176,9 +164,7 @@ const metadata = {
     }}
   >
     <Fragment slot="content">
-      <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">
-        Wind Energy
-      </h3>
+      <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">Wind Energy</h3>
     </Fragment>
 
     <Fragment slot="bg">
@@ -193,26 +179,28 @@ const metadata = {
     title="Why us?"
     columns={2}
     items={[
-      { title: "Flexibility",
-        description:"Aerodynamic workload comes in waves: we allow you to outsource the work when you need and not pay when you do not",
-        icon: 'tabler:chevron-right',
-
-      },
       {
-        title: "Customer-centric",
-        description: "We are here to help you. We value clear and concise communication to best understand how can we do it.",
-        icon: 'tabler:chevron-right',
-      },
-      {
-        title: "Knowledge returns",
+        title: 'Flexibility',
         description:
-          "We deliver not only comprehensive reports, presentations, results or raw data but also we transfer the knowledge acquired during the process. It feels like done in-house.",
+          'Aerodynamic workload comes in waves: we allow you to outsource the work when you need and not pay when you do not',
         icon: 'tabler:chevron-right',
       },
       {
-        title: "Global view",
+        title: 'Customer-centric',
         description:
-          "Differently from other very specialized firms, our wide expertise allows to see the bigger picture ",
+          'We are here to help you. We value clear and concise communication to best understand how can we do it.',
+        icon: 'tabler:chevron-right',
+      },
+      {
+        title: 'Knowledge returns',
+        description:
+          'We deliver not only comprehensive reports, presentations, results or raw data but also we transfer the knowledge acquired during the process. It feels like done in-house.',
+        icon: 'tabler:chevron-right',
+      },
+      {
+        title: 'Global view',
+        description:
+          'Differently from other very specialized firms, our wide expertise allows to see the bigger picture ',
         icon: 'tabler:chevron-right',
       },
       /* {
@@ -223,14 +211,10 @@ const metadata = {
       }, */
     ]}
   >
-  <Fragment slot="bg">
-    <div class="absolute inset-0 bg-white dark:bg-transparent"></div>
-  </Fragment>
-
+    <Fragment slot="bg">
+      <div class="absolute inset-0 bg-white dark:bg-transparent"></div>
+    </Fragment>
   </FAQs>
-
-
-
 
   <!-- FAQs Widget ******************* -->
 
@@ -246,14 +230,14 @@ const metadata = {
         icon: 'tabler:zoom-question',
       },
       {
-        title: 'How much would it cost, for example, a CFD simulation at various angles and/or airspeeds for one geometry',
+        title:
+          'How much would it cost, for example, a CFD simulation at various angles and/or airspeeds for one geometry',
         description: `If the geometry is clean so that only meshing, simulation and extraction of basic results are required, for a mesh of a few millions elements, price will be around 300E`,
         icon: 'tabler:zoom-question',
       },
       {
         title: 'What tools do you use?',
-        description:
-          'See our tools section',
+        description: 'See our tools section',
         icon: 'tabler:zoom-question',
       },
       {
@@ -276,6 +260,11 @@ const metadata = {
     subtitle=""
     items={[
       {
+        title:
+          '<a class="cursor-pointer hover:text-primary" target="blank" href=https://zcal.co/aerodynamiclab/meetus> Book a meeting with us </a>',
+        icon: 'tabler:calendar-month',
+      },
+      {
         title: 'hello@aerodynamiclab.com',
         icon: 'tabler:mail',
       },
@@ -293,4 +282,4 @@ const metadata = {
       },
     ]}
   />
-
+</Layout>
