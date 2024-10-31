@@ -7,6 +7,7 @@ import Features from '~/components/widgets/Features.astro';
 import Contact2 from '~/components/widgets/Contact2.astro';
 import Content from '~/components/widgets/Content.astro';
 import FAQs from '~/components/widgets/FAQs.astro';
+import Brands from '~/components/widgets/Brands.astro';
 
 import { headerData } from '~/navigation';
 
@@ -171,6 +172,55 @@ const metadata = {
       <div class="absolute inset-0 bg-white dark:bg-transparent"></div>
     </Fragment>
   </Content>
+
+    <!-- Stack Section ****************** -->
+
+    <Brands
+    id="stack-section"
+    title="Stack"
+    subtitle="These are some of the packages we work with"
+    icons={[]}
+    images={[
+      {
+        src: '~/assets/images/stack/ansys.png',
+        alt: 'ANSYS',
+        link: 'https://www.ansys.com/',
+      },
+      {
+        src: '~/assets/images/stack/openfoam.png',
+        alt: 'OpenFOAM',
+        link: 'https://www.openfoam.com/',
+      },
+      {
+        src: '~/assets/images/stack/starccmplus.png',
+        alt: 'StarCCM+',
+      },
+      {
+        src: '~/assets/images/stack/paraview.png',
+        alt: 'Paraview',
+      },
+      {
+        src: '~/assets/images/stack/pointwise.png',
+        alt: 'Pointwise',
+      },
+      {
+        src: '~/assets/images/stack/python.svg',
+        alt: 'Python',
+      },
+      {
+        src: '~/assets/images/stack/matlab.svg',
+        alt: 'MATLAB',
+      },
+      {
+        src: '~/assets/images/stack/solidworks.svg',
+        alt: 'Solidworks',
+      },
+      {
+        src: '~/assets/images/stack/catia.png',
+        alt: 'CATIA',
+      },
+    ]}
+  />
 
   <!-- Why us section ******************* -->
 

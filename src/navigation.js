@@ -11,6 +11,10 @@ export const headerData = {
         href: '/#applications-section',
       },
       {
+        text: 'Stack',
+        href: '/#stack-section'
+      },
+      {
         text: 'Why Us?',
         href: '/#why-us-section',
       },
