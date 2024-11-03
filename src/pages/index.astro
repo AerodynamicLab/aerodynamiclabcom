@@ -4,10 +4,10 @@ import Layout from '~/layouts/PageLayout.astro';
 import Header from '~/components/widgets/Header.astro';
 import LandingSection from '~/components/aerodynamiclab_specific/LandingSection.astro';
 import ExpertiseSection from '~/components/aerodynamiclab_specific/ExpertiseSection.astro';
-import Contact2 from '~/components/widgets/Contact2.astro';
-import Content from '~/components/widgets/Content.astro';
+import ContactSection from '~/components/aerodynamiclab_specific/ContactSection.astro';
+import Application from '~/components/widgets/Application.astro';
 import FAQs from '~/components/widgets/FAQs.astro';
-import Brands from '~/components/widgets/Brands.astro';
+import BrandsWithLinks from '~/components/aerodynamiclab_specific/BrandsWithLinks.astro';
 import { headerData } from '~/navigation';
 import { UI } from 'astrowind:config';
 
@@ -104,7 +104,7 @@ const metadata = {
 
   <!-- Applications Section **************** -->
 
-  <Content
+  <Application
     id="applications-section"
     title="Applications"
     subtitle=""
@@ -128,9 +128,9 @@ const metadata = {
     <Fragment slot="bg">
       <div class="absolute inset-0 bg-white dark:bg-transparent"></div>
     </Fragment>
-  </Content>
+  </Application>
 
-  <Content
+  <Application
     isAfterContent={true}
     items={[
       {
@@ -150,9 +150,9 @@ const metadata = {
     <Fragment slot="bg">
       <div class="absolute inset-0 bg-white dark:bg-transparent"></div>
     </Fragment>
-  </Content>
+  </Application>
 
-  <Content
+  <Application
     isReversed
     isAfterContent={true}
     items={[
@@ -173,11 +173,11 @@ const metadata = {
     <Fragment slot="bg">
       <div class="absolute inset-0 bg-white dark:bg-transparent"></div>
     </Fragment>
-  </Content>
+  </Application>
 
     <!-- Stack Section ****************** -->
 
-    <Brands
+    <BrandsWithLinks
     id="stack-section"
     title="Stack"
     subtitle="These are some of the packages we work with"
@@ -338,7 +338,7 @@ const metadata = {
 
   <!-- Contact Us Section ****************** -->
 
-  <Contact2
+  <ContactSection
     title="Reach out"
     id="contact-section"
     subtitle=""
