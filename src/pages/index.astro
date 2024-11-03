@@ -8,8 +8,8 @@ import Contact2 from '~/components/widgets/Contact2.astro';
 import Content from '~/components/widgets/Content.astro';
 import FAQs from '~/components/widgets/FAQs.astro';
 import Brands from '~/components/widgets/Brands.astro';
-
 import { headerData } from '~/navigation';
+import { UI } from 'astrowind:config';
 
 const metadata = {
   title: 'Aerodynamic Lab - Applied Aerodynamic Research',
@@ -27,7 +27,9 @@ const metadata = {
     tagline=""
     actions={[{ variant: 'primary', text: 'Contact Us', href: '#contact-section' }]}
     image={{
-      src: '~/assets/images/landing_plane_streamlines_light.png',
+        src: UI.theme === 'dark'
+          ? '~/assets/images/landing_plane_streamlines_dark.png' // Dark theme image
+          : '~/assets/images/landing_plane_streamlines_light.png', // Light theme image
       alt: 'Aerodynamic Lab - Paper Plane with streamlines',
     }}
   >
