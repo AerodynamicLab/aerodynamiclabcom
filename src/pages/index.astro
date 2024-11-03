@@ -2,8 +2,8 @@
 import Layout from '~/layouts/PageLayout.astro';
 
 import Header from '~/components/widgets/Header.astro';
-import Hero2 from '~/components/widgets/Hero2.astro';
-import Features from '~/components/widgets/Features.astro';
+import LandingSection from '~/components/aerodynamiclab_specific/LandingSection.astro';
+import ExpertiseSection from '~/components/aerodynamiclab_specific/ExpertiseSection.astro';
 import Contact2 from '~/components/widgets/Contact2.astro';
 import Content from '~/components/widgets/Content.astro';
 import FAQs from '~/components/widgets/FAQs.astro';
@@ -23,7 +23,7 @@ const metadata = {
 
   <!-- Landing Section ******************* -->
 
-  <Hero2
+  <LandingSection
     tagline=""
     actions={[{ variant: 'primary', text: 'Contact Us', href: '#contact-section' }]}
     image={{
@@ -44,11 +44,11 @@ const metadata = {
       Our goal is to allow access and knowledge to the latest technologies in design, analysis, and optimization for aircraft,
       wind turbines, propellers and other vehicles.
     </Fragment>
-  </Hero2>
+  </LandingSection>
 
   <!-- Expertise Section *************** -->
 
-  <Features
+  <ExpertiseSection
     id="expertise-section"
     title="Expertise"
     subtitle=""
