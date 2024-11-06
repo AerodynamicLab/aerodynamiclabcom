@@ -5,9 +5,9 @@ import Header from '~/components/widgets/Header.astro';
 import LandingSection from '~/components/aerodynamiclab_specific/LandingSection.astro';
 import ExpertiseSection from '~/components/aerodynamiclab_specific/ExpertiseSection.astro';
 import ContactSection from '~/components/aerodynamiclab_specific/ContactSection.astro';
-import Application from '~/components/widgets/Application.astro';
-import FAQs from '~/components/widgets/FAQs.astro';
-import BrandsWithLinks from '~/components/aerodynamiclab_specific/BrandsWithLinks.astro';
+import Application from '~/components/aerodynamiclab_specific/Application.astro';
+import TextElementsSection from '~/components/aerodynamiclab_specific/TextElementsSection.astro';
+import BrandsWithLinks from '~/components/widgets/BrandsWithLinks.astro';
 import { headerData } from '~/navigation';
 import { UI } from 'astrowind:config';
 
@@ -117,7 +117,7 @@ const metadata = {
       },
     ]}
     image={{
-      src: '~/assets/images/evtol-aircraft.png',
+      src: '~/assets/images/applications/evtol-aircraft.png',
       alt: 'eVTOL Small Aircraft UAVs',
     }}
   >
@@ -139,7 +139,7 @@ const metadata = {
       },
     ]}
     image={{
-      src: '~/assets/images/drag-reduction-cropped.png',
+      src: '~/assets/images/applications/drag-reduction-cropped.png',
       alt: 'Drag Reduction',
     }}
   >
@@ -162,7 +162,7 @@ const metadata = {
       },
     ]}
     image={{
-      src: '~/assets/images/wind-energy.png',
+      src: '~/assets/images/applications/wind-energy.png',
       alt: 'Wind Energy',
     }}
   >
@@ -258,7 +258,7 @@ const metadata = {
 
   <!-- Why us section ******************* -->
 
-  <FAQs
+  <TextElementsSection
     id="why-us-section"
     title="Why us?"
     columns={2}
@@ -298,11 +298,11 @@ const metadata = {
     <Fragment slot="bg">
       <div class="absolute inset-0 bg-white dark:bg-transparent"></div>
     </Fragment>
-  </FAQs>
+  </TextElementsSection>
 
   <!-- FAQs Widget ******************* -->
 
-  <FAQs
+  <TextElementsSection
     id="faqs-section"
     title="FAQs"
     columns={1}
@@ -334,7 +334,7 @@ const metadata = {
     <Fragment slot="bg">
       <div class="absolute inset-0 bg-white dark:bg-transparent"></div>
     </Fragment>
-  </FAQs>
+  </TextElementsSection>
 
   <!-- Contact Us Section ****************** -->
 

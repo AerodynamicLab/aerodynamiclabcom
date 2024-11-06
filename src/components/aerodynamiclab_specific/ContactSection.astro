@@ -2,7 +2,7 @@
 import { Icon } from 'astro-icon/components';
 import WidgetWrapper from '~/components/ui/WidgetWrapper.astro';
 import Headline from '~/components/ui/Headline.astro';
-import FormContainer from '~/components/ui/ZohoForm.astro';
+import ZohoForm from '~/components/aerodynamiclab_specific/ZohoForm.astro';
 import type { Steps as Props } from '~/types';
 
 const {
@@ -34,8 +34,7 @@ const {
           // ...((classes?.headline as {}) ?? {}),
         }}
       />
-
-      <FormContainer />
+      <ZohoForm />
     </div>
 
     <div class="w-full lg:w-1/2 px-0">
