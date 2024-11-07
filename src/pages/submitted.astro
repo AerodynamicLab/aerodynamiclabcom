@@ -1,0 +1,37 @@
+---
+import Layout from '~/layouts/PageLayout.astro';
+
+import Header from '~/components/widgets/Header.astro';
+import Hero3 from '~/components/widgets/Hero3.astro';
+
+import { headerData } from '~/navigation';
+
+const metadata = {
+  title: 'Aerodynamic Lab - Applied Aerodynamic Research',
+};
+
+---
+
+<Layout metadata={metadata}>
+  <Fragment slot="header">
+    <Header
+      {...headerData}
+      isSticky
+    />
+  </Fragment>
+
+  <Hero3
+  actions={[
+    {
+      variant: 'primary',
+      text: 'Return home',
+      href: '/'
+    }]}
+    image={{ src: '~/assets/images/landing_plane_streamlines_light.png', alt: 'Aerodynamic Lab - Paper Plane with streamlines' }}
+    subtitle = {' Thank you for your message! <br> Expect a response in the next 24 hours.'}}
+    >
+
+
+
+  </Hero3>
+</Layout>

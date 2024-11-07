@@ -1,0 +1,23 @@
+name: Build and Deploy
+on:
+  push:
+    branches:
+      - adaptation_aerolab # change to your desired branch name
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+
+      - name: Install and Build
+        run: |
+          npm ci
+          npm run build
+      
+      - name: Deploy
+        uses: JamesIves/github-pages-deploy-action@v4
+        with:
+          folder: dist # your output folder name
