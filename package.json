@@ -1,7 +1,8 @@
 {
-  "name": "@onwidget/astrowind",
-  "version": "1.0.0-beta.38",
-  "description": "AstroWind: A free template using Astro 4.0 and Tailwind CSS. Astro starter theme.",
+  "name": "AerodynamicLab",
+  "homepage": " https://aerodynamiclab.com",
+  "version": "0.0.1",
+  "description": "AerodynamicLab: Applied Aerodynamic Research",
   "type": "module",
   "private": true,
   "engines": {
