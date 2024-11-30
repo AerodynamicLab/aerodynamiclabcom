@@ -26,6 +26,7 @@ const whenExternalScripts = (items = []) =>
 
 export default defineConfig({
   output: 'static',
+  site: 'https://aerodynamiclab.com',
 
   integrations: [
     tailwind({
