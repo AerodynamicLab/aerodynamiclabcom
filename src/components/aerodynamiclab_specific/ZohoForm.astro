@@ -7,11 +7,23 @@ const submitted_link = getPermalink('/submitted')
 ---
 <script src="/src/components/aerodynamiclab_specific/ZohoFormJS.js"></script>
 
+<!-- Google reCaptcha js library -->
+<script src="https://www.google.com/recaptcha/api.js"></script>
+
+<script>
+  function onSubmit(token) {
+    if (zf_ValidateAndSubmit()) {
+        document.getElementById("contact-form").submit();
+    } else {
+        alert("Please correct the errors in the form before submitting.");
+    }
+  }
+</script>
+
 <form
   action="https://forms.zohopublic.com/robertomzcgm1/form/AerodynamicLabContactUs/formperma/qLZcrTENqRE0XJsZ5A1TVBBgOFm8SF6Yoqp4y_8F4QQ/htmlRecords/submit"
-  name="form"
+  name="contact-form"
   method="POST"
-  onSubmit='javascript:document.charset="UTF-8"; return zf_ValidateAndSubmit();'
   accept-charset="UTF-8"
   enctype="multipart/form-data"
   id="form"
@@ -109,27 +121,23 @@ const submitted_link = getPermalink('/submitted')
   </div>
 
   <div class="mt-10 grid">
-    <Button variant="primary" type="submit">
-      Submit
+    <Button
+      variant="primary" 
+      type="submit"
+      class="g-recaptcha"
+      data-sitekey="6LcR_pQqAAAAACEH6gmPBQIX398nFglZUlvO8Xqg" 
+      data-callback='onSubmit' 
+      data-action='submit'>
+        Submit
     </Button>
   </div>
 
   <div class="mt-3 text-center">
     <p class="text-sm text-gray-600 dark:text-gray-400">
-      By submitting this contact form, you acknowledge and agree to the collection of your personal information. 
+      <small><small>By submitting this contact form, you acknowledge and agree to the collection of your personal information. 
+      This site is protected by reCAPTCHA and the Google <a href="https://policies.google.com/privacy">Privacy Policy</a> and <a href="https://policies.google.com/terms">Terms of Service</a> apply.</small></small>
+    </p>
     </p>
   </div>
 </form>
 
-<script type="text/javascript">
-  var zf_DateRegex = new RegExp(
-    "^(([0][1-9])|([1-2][0-9])|([3][0-1]))[-](Jan|Feb|Mar|Apr|May|Jun|Jul|Aug|Sep|Oct|Nov|Dec|JAN|FEB|MAR|APR|MAY|JUN|JUL|AUG|SEP|OCT|NOV|DEC)[-](?:(?:19|20)[0-9]{2})$"
-  );
-  var zf_MonthYearRegex = new RegExp(
-    "^(Jan|Feb|Mar|Apr|May|Jun|Jul|Aug|Sep|Oct|Nov|Dec|JAN|FEB|MAR|APR|MAY|JUN|JUL|AUG|SEP|OCT|NOV|DEC)[-](?:(?:19|20)[0-9]{2})$"
-  );
-  var zf_MandArray = ["SingleLine", "Email", "MultiLine"];
-  var zf_FieldArray = ["SingleLine", "Email", "MultiLine"];
-  var isSalesIQIntegrationEnabled = false;
-  var salesIQFieldsArray = [];
-</script>
