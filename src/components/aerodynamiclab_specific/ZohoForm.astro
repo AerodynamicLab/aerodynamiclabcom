@@ -7,28 +7,26 @@ const submitted_link = getPermalink('/submitted')
 ---
 <script src="/src/components/aerodynamiclab_specific/ZohoFormJS.js"></script>
 
-<!-- Google reCaptcha js library -->
-<script src="https://www.google.com/recaptcha/api.js"></script>
-
 <script>
-  function onSubmit(token) {
-    if (zf_ValidateAndSubmit()) {
-        document.getElementById("contact-form").submit();
-    } else {
-        alert("Please correct the errors in the form before submitting.");
-    }
-  }
+  window.onSubmit = function(token) {
+      document.getElementById("contact-form").submit();
+  };
 </script>
+
+
+
+<!-- Google reCaptcha js library -->
+<script async src="https://www.google.com/recaptcha/api.js"></script>
+
 
 <form
   action="https://forms.zohopublic.com/robertomzcgm1/form/AerodynamicLabContactUs/formperma/qLZcrTENqRE0XJsZ5A1TVBBgOFm8SF6Yoqp4y_8F4QQ/htmlRecords/submit"
-  name="contact-form"
+  name="form"
   method="POST"
   accept-charset="UTF-8"
   enctype="multipart/form-data"
-  id="form"
-  autocomplete="on"
->
+  id="contact-form"
+  autocomplete="on">
 
   <input
     type="hidden"
@@ -122,7 +120,7 @@ const submitted_link = getPermalink('/submitted')
 
   <div class="mt-10 grid">
     <Button
-      variant="primary" 
+      variant="primary"
       type="submit"
       class="g-recaptcha"
       data-sitekey="6LcR_pQqAAAAACEH6gmPBQIX398nFglZUlvO8Xqg" 
