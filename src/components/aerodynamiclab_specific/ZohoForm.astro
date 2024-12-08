@@ -9,8 +9,17 @@ import Button from '~/components/ui/Button.astro';
   accept-charset="UTF-8"
   enctype="multipart/form-data"
   id="contact-form"
+  netlify-honeypot="h-field"
   autocomplete="on"
 >
+
+  <!-- Honeypot hidden field only bots should fill -->
+
+  <p class="hidden">
+    <label>
+      Humans dont fill this <input name="h-field" />
+    </label>
+  </p>
 
   <!--------- Name Field ---------->
   <div class="mb-6">
@@ -21,6 +30,7 @@ import Button from '~/components/ui/Button.astro';
       type="text"
       name="SingleLine"
       id="name"
+      name="name"
       value=""
       maxlength="255"
       placeholder=""
@@ -41,6 +51,7 @@ import Button from '~/components/ui/Button.astro';
       value=""
       placeholder=""
       id="email"
+      name="email"
       autocomplete="on"
       class="py-3 px-4 block w-full text-md rounded-lg border border-gray-200 dark:border-gray-700 bg-white dark:bg-slate-900"
     />
