@@ -10,6 +10,7 @@ import Button from '~/components/ui/Button.astro';
   enctype="multipart/form-data"
   id="contact-form"
   netlify-honeypot="h-field"
+  data-netlify-recaptcha="true"
   autocomplete="on"
 >
 
@@ -70,6 +71,10 @@ import Button from '~/components/ui/Button.astro';
       class="py-3 px-4 block w-full text-md rounded-lg border border-gray-200 dark:border-gray-700 bg-white dark:bg-slate-900"
     />
   </div>
+
+  <!--------- reCaptcha from netifly ---------->
+  <div data-netlify-recaptcha="true"></div>
+
 
   <div class="mt-10 grid">
     <Button variant="primary" type="submit">
