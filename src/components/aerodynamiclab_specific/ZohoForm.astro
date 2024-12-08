@@ -7,23 +7,15 @@ const submitted_link = getPermalink('/submitted')
 ---
 <script src="/src/components/aerodynamiclab_specific/ZohoFormJS.js"></script>
 
-<script>
-  window.onSubmit = function(token) {
-      document.getElementById("contact-form").submit();
-  };
-</script>
-
-
-
 <!-- Google reCaptcha js library -->
-<script async src="https://www.google.com/recaptcha/api.js"></script>
-
+<script src="https://www.google.com/recaptcha/api.js" async defer></script>
 
 <form
   action="https://forms.zohopublic.com/robertomzcgm1/form/AerodynamicLabContactUs/formperma/qLZcrTENqRE0XJsZ5A1TVBBgOFm8SF6Yoqp4y_8F4QQ/htmlRecords/submit"
   name="form"
   method="POST"
   accept-charset="UTF-8"
+  onSubmit='javascript:document.charset="UTF-8"; return zf_ValidateAndSubmit();'
   enctype="multipart/form-data"
   id="contact-form"
   autocomplete="on">
@@ -118,23 +110,21 @@ const submitted_link = getPermalink('/submitted')
     </p>
   </div>
 
+  <br/>
+  <div class="g-recaptcha" data-sitekey="6LdR7JUqAAAAADsk6yX71771hcLwuzGr7JsA6DHN"></div>
+
   <div class="mt-10 grid">
     <Button
       variant="primary"
-      type="submit"
-      class="g-recaptcha"
-      data-sitekey="6LcR_pQqAAAAACEH6gmPBQIX398nFglZUlvO8Xqg" 
-      data-callback='onSubmit' 
-      data-action='submit'>
+      type="submit">
         Submit
     </Button>
   </div>
 
   <div class="mt-3 text-center">
     <p class="text-sm text-gray-600 dark:text-gray-400">
-      <small><small>By submitting this contact form, you acknowledge and agree to the collection of your personal information. 
-      This site is protected by reCAPTCHA and the Google <a href="https://policies.google.com/privacy">Privacy Policy</a> and <a href="https://policies.google.com/terms">Terms of Service</a> apply.</small></small>
-    </p>
+      <small>By submitting you acknowledge and agree to the collection of your personal information. 
+      This site is protected by reCAPTCHA and the Google <a href="https://policies.google.com/privacy">Privacy Policy</a> and <a href="https://policies.google.com/terms">Terms of Service</a> apply.</small>
     </p>
   </div>
 </form>
